@@ -45,10 +45,7 @@ app.post('/api/v1/create', async(req, res) => {
         project : project
     })
 
-    const find = await testModel.findOne({email : email})
-
     try {
-            res.status(201).json({ message : "emial is alredy exits"})
             await newTest.save()
             res.status(201).json({ message : "ok "})
       
