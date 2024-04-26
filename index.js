@@ -24,7 +24,10 @@ const PORT = 4000;
 app.listen(PORT, () => {
     console.log("server is start ", PORT);
 })
-
+app.get("/", async (req, res) => {
+    res.send("hello")
+}
+        
 app.get("/api/v1/clint", async(req, res) => {
     try {
         const clint = await testModel.find();
