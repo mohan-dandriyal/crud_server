@@ -27,6 +27,10 @@ app.listen(PORT, () => {
 app.get("/", async (req, res) => {
     res.send("hello")
 }
+
+app.get("/", async(req, res) => {
+       res.send("this is my Home Page");
+})        
         
 app.get("/api/v1/clint", async(req, res) => {
     try {
